@@ -60,3 +60,29 @@ The very first school project at 42. This repository contains everything to vali
 * **ft_strtrim**
 * **ft_tolower**
 * **ft_toupper**
+
+## Bonus functions :
+* **ft_btree_create_node**
+	```C
+	t_btree	ft_btree_create_node(void *item);
+	```
+	Create a binary tree node (according to the structure defined in **libft.h**) in which you store ***`item`***.
+* **ft_btree_apply_infix**
+	```C
+	t_btree	ft_apply_infix(t_btree *src, void (applyf)(void *));
+	```
+	Traverse a binary tree starting from ***`src`*** following the infix method and apply the function ***`applyf`*** on each node.
+	(More informations about infix method -> https://en.wikipedia.org/wiki/Binary_expression_tree)
+* **ft_btree_apply_prefix**
+	```C
+	t_btree	ft_apply_prefix(t_btree *src, void (applyf)(void *));
+	```
+	Traverse a binary tree starting from ***`src`*** following the prefix method and apply the function ***`applyf`*** on each node.
+	(More informations about prefix method -> https://en.wikipedia.org/wiki/Binary_expression_tree)
+* **ft_btree_apply_suffix**
+	```C
+	t_btree	ft_apply_suffix(t_btree *src, void (applyf)(void *));
+	```
+	Traverse a binary tree starting from ***`src`*** following the suffix method and apply the function ***`applyf`*** on each node.
+	(More informations about suffix method -> https://en.wikipedia.org/wiki/Binary_expression_tree)
+
