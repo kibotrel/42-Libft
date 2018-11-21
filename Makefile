@@ -6,7 +6,7 @@
 #    By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 14:35:03 by kibotrel          #+#    #+#              #
-#    Updated: 2018/11/21 14:46:08 by kibotrel         ###   ########.fr        #
+#    Updated: 2018/11/21 15:58:47 by kibotrel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -104,7 +104,7 @@ clean:
 
 fclean: clean
 	@echo "\033[32m***   Deleting executable file ...    ***\n\033[0m"
-	@rm -rf $(CBIN)
+	@rm -rf $(NAME)
 
 re: fclean all
 
