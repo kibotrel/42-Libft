@@ -6,7 +6,7 @@
 /*   By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 14:59:01 by kibotrel          #+#    #+#             */
-/*   Updated: 2018/11/16 13:12:16 by kibotrel         ###   ########.fr       */
+/*   Updated: 2018/11/23 16:37:14 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,8 +135,6 @@ t_chain				*ft_create_elem(void *data);
 t_chain				*ft_list_last(t_chain *begin_list);
 t_chain				*ft_list_at(t_chain *begin_list, unsigned int nbr);
 
-size_t				ft_strlcpy(char *dest, char *src, size_t size);
-
 void				*ft_btree_search_item(t_btree *root, void *dataref,
 											int (*cmpf)(void *, void *));
 
@@ -155,7 +153,6 @@ void				ft_foreach(int *tab, int length, void (*f)(int));
 void				ft_foreach_if(t_chain *begin_list, void (*f)(void *),
 									void *data_ref, int (*cmp)());
 
-char				*ft_strcapitalize(char *str);
 char				*ft_strrev(char *str);
 
 int					ft_list_size(t_chain *begin_list);

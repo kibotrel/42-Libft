@@ -6,7 +6,7 @@
 #    By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 14:35:03 by kibotrel          #+#    #+#              #
-#    Updated: 2018/11/21 15:58:47 by kibotrel         ###   ########.fr        #
+#    Updated: 2018/11/23 16:42:31 by kibotrel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,8 +31,8 @@ SRC			= ft_putchar.c				ft_putchar_fd.c			\
 			  ft_strnew.c				ft_strdel.c				\
 			  ft_strclr.c				ft_strsplit.c			\
 			  ft_bzero.c				ft_strtrim.c			\
-			  ft_strlcat.c				ft_strlcpy.c			\
-			  ft_memalloc.c				ft_create_elem.c		\
+			  ft_strlcat.c				ft_memalloc.c			\
+			  ft_create_elem.c									\
 			  													\
 			  ft_strstr.c				ft_strnstr.c			\
 			  ft_strcmp.c				ft_strncmp.c			\
@@ -43,7 +43,7 @@ SRC			= ft_putchar.c				ft_putchar_fd.c			\
 			  ft_strmap.c				ft_strmapi.c			\
 			  ft_strchr.c				ft_strrchr.c			\
 			  ft_strjoin.c				ft_strsub.c				\
-			  ft_strrev.c				ft_strcapitalize.c		\
+			  ft_strrev.c										\
 			  													\
 			  ft_str_is_uppercase.c		ft_str_is_lowercase.c	\
 			  ft_toupper.c				ft_tolower.c			\
