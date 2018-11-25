@@ -6,13 +6,13 @@
 /*   By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/25 16:24:36 by kibotrel          #+#    #+#             */
-/*   Updated: 2018/11/25 16:27:08 by kibotrel         ###   ########.fr       */
+/*   Updated: 2018/11/25 19:21:38 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int ft_numlen(int nb)
+unsigned int	ft_numlen(int nb)
 {
 	unsigned int	size;
 
