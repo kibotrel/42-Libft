@@ -6,7 +6,7 @@
 #    By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 14:35:03 by kibotrel          #+#    #+#              #
-#    Updated: 2018/11/25 13:56:22 by kibotrel         ###   ########.fr        #
+#    Updated: 2018/11/25 13:58:55 by kibotrel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -85,7 +85,7 @@ CC			= gcc
 
 $(NAME): $(CHECKDIR) $(COBJ)
 	@echo "\033[33m\n      - Building \033[0m$(NAME) \033[33m...\n\033[0m"
-	@ar rcs $(NAME) $(COBJ)
+	@ar rc $(NAME) $(COBJ)
 	@echo "\033[33m      - Indexing \033[0m$(NAME) \033[33m...\n\033[0m"
 	@ranlib $(NAME)
 	@echo "\033[32m***   Project $(NAME) successfully compiled   ***\n\033[0m"
