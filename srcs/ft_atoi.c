@@ -6,17 +6,11 @@
 /*   By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:32:03 by kibotrel          #+#    #+#             */
-/*   Updated: 2018/11/25 14:14:56 by kibotrel         ###   ########.fr       */
+/*   Updated: 2018/11/25 16:58:29 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	is_blank(char c)
-{
-	return ((c == '\t' || c == '\n' || c == '\r' || c == '\v'
-			|| c == '\f' || c == ' ') ? 1 : 0);
-}
 
 static int	lim(unsigned long long n, int sign)
 {
@@ -36,7 +30,7 @@ int			ft_atoi(const char *str)
 	i = 0;
 	negative = 0;
 	result = 0;
-	while (is_blank(str[i]))
+	while (ft_isspace(str[i]))
 		i++;
 	if (str[i] == '+' || str[i] == '-')
 	{
