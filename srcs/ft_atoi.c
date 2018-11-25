@@ -6,7 +6,7 @@
 /*   By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:32:03 by kibotrel          #+#    #+#             */
-/*   Updated: 2018/11/13 13:48:37 by kibotrel         ###   ########.fr       */
+/*   Updated: 2018/11/25 14:14:56 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 static int	is_blank(char c)
 {
-	if (c == '\t' || c == '\n' || c == '\r' || c == '\v' || c == '\f'
-		|| c == ' ')
-		return (1);
-	return (0);
+	return ((c == '\t' || c == '\n' || c == '\r' || c == '\v'
+			|| c == '\f' || c == ' ') ? 1 : 0);
 }
 
 static int	lim(unsigned long long n, int sign)
@@ -46,14 +44,9 @@ int			ft_atoi(const char *str)
 			negative = 1;
 		i++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		result = result * 10 + ((int)str[i] - '0');
-		i++;
-	}
+	while (ft_isdigit((int)str[i]))
+		result = result * 10 + ((int)str[i++] - '0');
 	if (lim(result, negative) == 0 || lim(result, negative) == -1)
 		return (lim(result, negative));
-	if (negative == 1)
-		return (-result);
-	return (result);
+	return ((negative == 1) ? -result : result);
 }
