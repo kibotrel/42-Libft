@@ -6,7 +6,7 @@
 #    By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 14:35:03 by kibotrel          #+#    #+#              #
-#    Updated: 2018/11/23 16:42:31 by kibotrel         ###   ########.fr        #
+#    Updated: 2018/11/25 13:04:38 by kibotrel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -82,9 +82,11 @@ INC			= ./includes/
 
 CFLAGS		= -I$(INC) -Wall -Wextra -Werror
 
+ODIR		= $(shell if [ ! -d "$(OBJDIR)" ]; then	mkdir $(OBJDIR); fi)
+
 CC			= gcc
 
-$(NAME): $(COBJ)
+$(NAME): $(COBJ) $(ODIR)
 	@echo "\033[33m\n      - Building \033[0m$(NAME) \033[33m...\n\033[0m"
 	@ar rc $(NAME) $(COBJ)
 	@echo "\033[33m      - Indexing \033[0m$(NAME) \033[33m...\n\033[0m"
@@ -99,11 +101,14 @@ $(OBJDIR)%.o: $(SRCDIR)%.c
 
 clean:
 	@clear
-	@echo "\033[32m***   Deleting all object files ...   ***\n\033[0m"
+	@echo "\033[32m***   Deleting all object files   ...   ***\n\033[0m"
 	@rm -rf $(COBJ)
+	@echo "\033[32m***   Deleting objects directory  ...   ***\n\033[0m"
+	@rm -rf $(OBJDIR)
+
 
 fclean: clean
-	@echo "\033[32m***   Deleting executable file ...    ***\n\033[0m"
+	@echo "\033[32m***   Deleting executable file    ...   ***\n\033[0m"
 	@rm -rf $(NAME)
 
 re: fclean all
