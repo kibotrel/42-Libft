@@ -6,7 +6,7 @@
 /*   By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 13:51:47 by kibotrel          #+#    #+#             */
-/*   Updated: 2018/11/11 15:33:50 by kibotrel         ###   ########.fr       */
+/*   Updated: 2018/11/25 18:45:27 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,5 @@
 
 void	ft_strclr(char *s)
 {
-	size_t	i;
-
-	i = 0;
-	while (s && s[i])
-		s[i++] = '\0';
+	ft_bzero((void *)s, ft_strlen(s));
 }

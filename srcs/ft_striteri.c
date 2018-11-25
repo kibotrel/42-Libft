@@ -6,7 +6,7 @@
 /*   By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 14:15:34 by kibotrel          #+#    #+#             */
-/*   Updated: 2018/11/14 15:42:35 by kibotrel         ###   ########.fr       */
+/*   Updated: 2018/11/25 19:01:03 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,9 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 
 	i = 0;
 	if (f > 0)
-	{
 		while (s && s[i])
 		{
 			f(i, &s[i]);
 			i++;
 		}
-	}
 }
