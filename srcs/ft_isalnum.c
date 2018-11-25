@@ -6,7 +6,7 @@
 /*   By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 13:24:04 by kibotrel          #+#    #+#             */
-/*   Updated: 2018/11/08 13:30:11 by kibotrel         ###   ########.fr       */
+/*   Updated: 2018/11/25 14:22:29 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 int	ft_isalnum(int c)
 {
-	if (ft_isalpha(c) == 1 || ft_isdigit(c) == 1)
-		return (1);
-	return (0);
+	return ((ft_isalpha(c) == 1 || ft_isdigit(c) == 1) ? 1 : 0);
 }
