@@ -6,21 +6,22 @@
 /*   By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:20:13 by kibotrel          #+#    #+#             */
-/*   Updated: 2018/11/07 17:29:19 by kibotrel         ###   ########.fr       */
+/*   Updated: 2018/11/25 19:40:13 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <limits.h>
 
 void	ft_putnbr(int nb)
 {
 	if (nb < 0)
 	{
 		ft_putchar('-');
-		if (nb == -2147483648)
+		if (nb == INT_MIN)
 		{
 			ft_putchar('2');
-			nb = -147483648;
+			nb = INT_MIN + 2000000000;
 		}
 		nb = -nb;
 	}

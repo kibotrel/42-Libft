@@ -6,7 +6,7 @@
 /*   By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 17:22:57 by kibotrel          #+#    #+#             */
-/*   Updated: 2018/11/13 11:20:58 by kibotrel         ###   ########.fr       */
+/*   Updated: 2018/11/25 19:25:35 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,10 @@ static size_t	precheck(char const *s)
 {
 	size_t			i;
 
-	i = 0;
-	while (s && s[i])
-	{
+	i = -1;
+	while (s && s[++i])
 		if (s[i] != '\0' && s[i] != ' ' && s[i] != '\t' && s[i] != '\n')
 			return (1);
-		i++;
-	}
 	return (0);
 }
 
