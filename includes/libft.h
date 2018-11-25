@@ -6,7 +6,7 @@
 /*   By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 14:59:01 by kibotrel          #+#    #+#             */
-/*   Updated: 2018/11/23 16:37:14 by kibotrel         ###   ########.fr       */
+/*   Updated: 2018/11/25 16:58:01 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,6 +129,8 @@ typedef struct		s_btree
 	void			*item;
 }					t_btree;
 
+unsigned int		ft_numlen(int nb);
+
 t_btree				*ft_btree_create_node(void *item);
 
 t_chain				*ft_create_elem(void *data);
@@ -162,6 +164,7 @@ int					ft_is_sort(int *tab, int length, int (*f)(int, int));
 
 int					ft_str_is_lowercase(char *str);
 int					ft_str_is_uppercase(char *str);
+int					ft_isspace(int c);
 
 int					ft_fibonacci(int index);
 int					ft_find_next_prime(int nb);
