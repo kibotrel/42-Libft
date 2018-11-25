@@ -6,7 +6,7 @@
 /*   By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 15:49:09 by kibotrel          #+#    #+#             */
-/*   Updated: 2018/11/14 11:10:58 by kibotrel         ###   ########.fr       */
+/*   Updated: 2018/11/25 17:59:28 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		return (ft_strlen(src) + size);
 	else
 	{
-		while (src[j] && i + j < size - 1)
+		while (src && src[j] && i + j < size - 1)
 		{
 			dst[i + j] = src[j];
 			j++;

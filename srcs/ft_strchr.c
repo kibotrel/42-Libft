@@ -6,7 +6,7 @@
 /*   By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 18:09:11 by kibotrel          #+#    #+#             */
-/*   Updated: 2018/11/08 18:57:22 by kibotrel         ###   ########.fr       */
+/*   Updated: 2018/11/25 18:00:17 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ char	*ft_strchr(const char *s, int c)
 	i = 0;
 	if (c == 0)
 		return ((char*)s + ft_strlen(s));
-	while (s[i])
+	while (s && s[i])
 	{
 		if (s[i] == c)
 			return ((char*)s + i);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

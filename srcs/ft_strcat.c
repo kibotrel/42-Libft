@@ -6,7 +6,7 @@
 /*   By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 21:20:01 by kibotrel          #+#    #+#             */
-/*   Updated: 2018/11/07 21:20:13 by kibotrel         ###   ########.fr       */
+/*   Updated: 2018/11/25 17:56:32 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strcat(char *s1, const char *s2)
 
 	i = ft_strlen(s1);
 	j = -1;
-	while (s2[++j])
+	while (s2 && s2[++j])
 		s1[i + j] = s2[j];
 	s1[i + j] = '\0';
 	return (s1);

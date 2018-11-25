@@ -6,7 +6,7 @@
 /*   By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/05 18:43:58 by kibotrel          #+#    #+#             */
-/*   Updated: 2018/11/19 14:16:26 by kibotrel         ###   ########.fr       */
+/*   Updated: 2018/11/25 17:52:43 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,9 @@ char	*ft_strdup(const char *s1)
 	int		i;
 	char	*dup;
 
-	i = 0;
-	while (s1 && s1[i])
-		i++;
-	if (!s1 || !(dup = (char*)malloc(sizeof(*dup) * (i + 1))))
-		return (0);
 	i = -1;
+	if (!s1 || !(dup = (char*)malloc(sizeof(*dup) * (ft_strlen(s1) + 1))))
+		return (NULL);
 	while (s1[++i])
 		dup[i] = s1[i];
 	dup[i] = '\0';

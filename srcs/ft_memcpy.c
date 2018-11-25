@@ -6,7 +6,7 @@
 /*   By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 13:03:09 by kibotrel          #+#    #+#             */
-/*   Updated: 2018/11/16 13:13:59 by kibotrel         ###   ########.fr       */
+/*   Updated: 2018/11/25 17:32:32 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		return (dst);
 	if (n == 0)
 		return (dst);
-	while (++i < n)
+	while (dst && src && ++i < n)
 		s2[i] = s1[i];
 	return (dst);
 }
