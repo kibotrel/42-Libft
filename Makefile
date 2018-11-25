@@ -6,7 +6,7 @@
 #    By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 14:35:03 by kibotrel          #+#    #+#              #
-#    Updated: 2018/11/25 17:01:30 by kibotrel         ###   ########.fr        #
+#    Updated: 2018/11/25 17:16:50 by kibotrel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -113,7 +113,6 @@ clean:
 	@clear
 	@echo "\033[32m***   Deleting all object files   ...   ***\n\033[0m"
 	@rm -rf $(COBJ)
-	@echo "\033[32m***   Deleting objects directory  ...   ***\n\033[0m"
 
 # Deleting the library after cleaning up all .o files
 
