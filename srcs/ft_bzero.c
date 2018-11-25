@@ -6,7 +6,7 @@
 /*   By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 14:31:02 by kibotrel          #+#    #+#             */
-/*   Updated: 2018/11/08 16:12:31 by kibotrel         ###   ########.fr       */
+/*   Updated: 2018/11/25 14:17:48 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,7 @@ void	ft_bzero(void *s, size_t n)
 	size_t	i;
 
 	str = (char*)s;
-	i = 0;
-	while (i < n)
-	{
+	i = -1;
+	while (++i < n)
 		str[i] = 0;
-		i++;
-	}
 }
