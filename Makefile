@@ -6,7 +6,7 @@
 #    By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 14:35:03 by kibotrel          #+#    #+#              #
-#    Updated: 2018/11/25 17:16:50 by kibotrel         ###   ########.fr        #
+#    Updated: 2019/01/15 23:22:14 by kibotrel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,7 +76,9 @@ SRC			= ft_putchar.c				ft_putchar_fd.c			\
 			  													\
 			  ft_btree_create_node.c	ft_btree_search_item.c	\
 			  ft_btree_apply_infix.c	ft_btree_apply_suffix.c	\
-			  ft_btree_apply_prefix.c
+			  ft_btree_apply_prefix.c							\
+			  													\
+			  ft_get_next_line.c
 
 # Some tricks in order to get the makefile doing his job the way I want (Can't be changed)
 

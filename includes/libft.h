@@ -6,7 +6,7 @@
 /*   By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 14:59:01 by kibotrel          #+#    #+#             */
-/*   Updated: 2018/11/25 16:58:01 by kibotrel         ###   ########.fr       */
+/*   Updated: 2019/01/15 23:24:53 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,6 +115,16 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 /*
 **	Extra Functions
 */
+
+# define BUFF_SIZE 4096
+
+typedef struct		s_gnlist
+{
+	struct s_gnlist	*next;
+	struct s_gnlist	*prev;
+	int				fd;
+	char			*save;
+}					t_gnlist;
 
 typedef struct		s_chain
 {
