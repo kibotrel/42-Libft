@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 unsigned int	ft_numlen(int nb)
 {
 	unsigned int	size;

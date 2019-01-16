@@ -6,11 +6,9 @@
 /*   By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/07 17:10:26 by kibotrel          #+#    #+#             */
-/*   Updated: 2018/11/15 18:39:55 by kibotrel         ###   ########.fr       */
+/*   Updated: 2019/01/15 23:39:08 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_fibonacci(int index)
 {

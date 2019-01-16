@@ -6,12 +6,11 @@
 /*   By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/26 20:46:29 by kibotrel          #+#    #+#             */
-/*   Updated: 2018/11/16 14:16:21 by kibotrel         ###   ########.fr       */
+/*   Updated: 2019/01/15 23:31:22 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 void	*ft_btree_search_item(t_btree *root, void *data_ref,
 		int (*cmpf)(void *, void *))
 {

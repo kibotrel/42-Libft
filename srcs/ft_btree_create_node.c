@@ -6,12 +6,12 @@
 /*   By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/26 14:51:17 by kibotrel          #+#    #+#             */
-/*   Updated: 2018/11/15 18:34:37 by kibotrel         ###   ########.fr       */
+/*   Updated: 2019/01/15 23:29:56 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stdlib.h>
+#include "libft.h"
 
 t_btree	*ft_btree_create_node(void *item)
 {

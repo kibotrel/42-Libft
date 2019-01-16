@@ -6,11 +6,9 @@
 /*   By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/17 22:37:15 by kibotrel          #+#    #+#             */
-/*   Updated: 2018/11/15 18:38:50 by kibotrel         ###   ########.fr       */
+/*   Updated: 2019/01/15 23:38:05 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_count_if(char **tab, int (*f)(char*))
 {
