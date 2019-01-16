@@ -6,7 +6,7 @@
 /*   By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 14:59:01 by kibotrel          #+#    #+#             */
-/*   Updated: 2019/01/16 01:59:21 by kibotrel         ###   ########.fr       */
+/*   Updated: 2019/01/16 07:36:10 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -166,6 +166,8 @@ void				ft_foreach_if(t_chain *begin_list, void (*f)(void *),
 									void *data_ref, int (*cmp)());
 
 char				*ft_strrev(char *str);
+
+int					ft_get_next_line(const int fd, char **line);
 
 int					ft_list_size(t_chain *begin_list);
 
