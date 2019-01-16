@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_btree_search_item.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/26 20:46:29 by kibotrel          #+#    #+#             */
-/*   Updated: 2019/01/15 23:31:22 by kibotrel         ###   ########.fr       */
+/*   Updated: 2019/01/16 01:37:13 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 void	*ft_btree_search_item(t_btree *root, void *data_ref,
 		int (*cmpf)(void *, void *))
 {
