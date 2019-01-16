@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 14:59:01 by kibotrel          #+#    #+#             */
-/*   Updated: 2019/01/15 23:24:53 by kibotrel         ###   ########.fr       */
+/*   Updated: 2019/01/16 01:59:21 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -183,5 +183,7 @@ int					ft_is_negative(int n);
 int					ft_power(int nb, int power);
 int					ft_match(char *s1, char *s2);
 int					ft_nmatch(char *s1, char *s2);
+int					ft_word_count(char const *s, char c);
+int					ft_word_length(char const *s, int i, char c);
 
 #endif

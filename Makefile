@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 14:35:03 by kibotrel          #+#    #+#              #
-#    Updated: 2019/01/15 23:22:14 by kibotrel         ###   ########.fr        #
+#    Updated: 2019/01/16 01:58:09 by kibotrel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,6 +49,7 @@ SRC			= ft_putchar.c				ft_putchar_fd.c			\
 			  ft_strchr.c				ft_strrchr.c			\
 			  ft_strjoin.c				ft_strsub.c				\
 			  ft_strrev.c				ft_numlen.c				\
+			  ft_word_count.c			ft_word_length.c		\
 			  													\
 			  ft_str_is_uppercase.c		ft_str_is_lowercase.c	\
 			  ft_toupper.c				ft_tolower.c			\
@@ -105,7 +106,7 @@ all: $(NAME)
 
 # Redefinition of implicit compilation rule to prompt some colors and file names during the said compilation
 
-$(OBJDIR)%.o: $(SRCDIR)%.c	
+$(OBJDIR)%.o: $(SRCDIR)%.c
 	@echo "\033[33m      - Compiling :\033[0m" $<
 	@$(CC) $(CFLAGS) -c $< -o $@
 
@@ -127,4 +128,3 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
-
