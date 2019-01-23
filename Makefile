@@ -6,7 +6,7 @@
 #    By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 14:35:03 by kibotrel          #+#    #+#              #
-#    Updated: 2019/01/16 01:58:09 by kibotrel         ###   ########.fr        #
+#    Updated: 2019/01/23 19:21:05 by kibotrel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ SRC			= ft_putchar.c				ft_putchar_fd.c			\
 			  ft_strclr.c				ft_strsplit.c			\
 			  ft_bzero.c				ft_strtrim.c			\
 			  ft_strlcat.c				ft_memalloc.c			\
-			  ft_create_elem.c									\
+			  ft_create_elem.c			ft_itoa_base.c			\
 			  													\
 			  ft_strstr.c				ft_strnstr.c			\
 			  ft_strcmp.c				ft_strncmp.c			\
@@ -73,7 +73,7 @@ SRC			= ft_putchar.c				ft_putchar_fd.c			\
 			  ft_match.c				ft_nmatch.c				\
 			  ft_power.c				ft_fibonacci.c			\
 			  ft_is_prime.c				ft_find_next_prime.c	\
-			  ft_is_negative.c									\
+			  ft_is_negative.c			ft_sort_int_tab.c		\
 			  													\
 			  ft_btree_create_node.c	ft_btree_search_item.c	\
 			  ft_btree_apply_infix.c	ft_btree_apply_suffix.c	\
