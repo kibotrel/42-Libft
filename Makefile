@@ -6,7 +6,7 @@
 #    By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 14:35:03 by kibotrel          #+#    #+#              #
-#    Updated: 2019/01/23 19:21:05 by kibotrel         ###   ########.fr        #
+#    Updated: 2019/02/20 19:41:26 by kibotrel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,8 @@ SRC			= ft_putchar.c				ft_putchar_fd.c			\
 		  	  ft_putstr.c				ft_putstr_fd.c			\
 			  ft_putnbr.c				ft_putnbr_fd.c			\
 			  ft_putendl.c				ft_putendl_fd.c			\
+			  ft_print_error.c									\
+																\
 			  ft_memset.c				ft_memdel.c				\
 			  ft_memcmp.c				ft_memchr.c				\
 			  ft_memcpy.c				ft_memccpy.c			\
