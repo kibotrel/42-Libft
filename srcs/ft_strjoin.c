@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 17:50:24 by kibotrel          #+#    #+#             */
-/*   Updated: 2018/11/25 19:19:51 by kibotrel         ###   ########.fr       */
+/*   Updated: 2019/02/26 14:10:07 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ char			*ft_strjoin(char const *s1, char const *s2)
 	size = ft_strlen(s1) + ft_strlen(s2);
 	if (!(join = (char*)malloc(sizeof(*join) * (size + 1))))
 		return (0);
-	return (ft_strcat(ft_strcpy(join, s1), s2));
+	return (ft_strncat(ft_strncpy(join, s1, ft_strlen(s1)), s2, ft_strlen(s2)));
 }
