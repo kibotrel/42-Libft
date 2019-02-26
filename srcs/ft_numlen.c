@@ -3,24 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_numlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/25 16:24:36 by kibotrel          #+#    #+#             */
-/*   Updated: 2018/11/25 19:21:38 by kibotrel         ###   ########.fr       */
+/*   Updated: 2019/02/26 14:18:57 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_numlen(int nb)
+unsigned int	ft_numlen(long value, int base)
 {
-	unsigned int	size;
+	int	size;
 
 	size = 1;
-	if (nb < 0)
+	if (base != 10 && value < 0)
+		value = -value;
+	if (value < 0)
 		size++;
-	while (nb / 10)
+	while (value / base)
 	{
-		nb /= 10;
 		size++;
+		value /= base;
 	}
 	return (size);
 }

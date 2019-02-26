@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 16:56:21 by kibotrel          #+#    #+#             */
-/*   Updated: 2018/11/25 16:26:11 by kibotrel         ###   ########.fr       */
+/*   Updated: 2019/02/26 14:16:59 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ char				*ft_itoa(int n)
 	int			length;
 	long		nb;
 
-	length = ft_numlen(n);
 	nb = n;
+	length = ft_numlen(nb, 10);
 	if (!(str = (char*)malloc(sizeof(*str) * (length + 1))))
 		return (0);
 	str[length--] = '\0';

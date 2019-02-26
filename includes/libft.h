@@ -6,7 +6,7 @@
 /*   By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 14:59:01 by kibotrel          #+#    #+#             */
-/*   Updated: 2019/02/26 13:48:20 by kibotrel         ###   ########.fr       */
+/*   Updated: 2019/02/26 14:19:15 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ char				*ft_strncpy(char *dst, const char *src, size_t len);
 char				*ft_strnstr(const char *s1, const char *s2, size_t len);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 size_t				ft_strlen(const char *s);
-unsigned int		ft_numlen(int nb);
+unsigned int		ft_numlen(long nb, int base);
 /*
 **	Conversion functions
 */
