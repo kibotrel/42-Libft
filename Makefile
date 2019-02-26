@@ -6,7 +6,7 @@
 #    By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 14:35:03 by kibotrel          #+#    #+#              #
-#    Updated: 2019/02/26 14:07:07 by kibotrel         ###   ########.fr        #
+#    Updated: 2019/02/26 14:21:59 by kibotrel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -87,8 +87,7 @@ $(OBJDIR)%.o: $(SRCDIR)%.c
 # Deleting all .o files and then the directory where they were located
 
 clean:
-	@clear
-	@echo "\033[32m***   Deleting all object files   ...   ***\n\033[0m"
+	@echo "\n\033[32m***   Deleting all object files   ...   ***\n\033[0m"
 	@rm -rf $(COBJ)
 
 # Deleting the library after cleaning up all .o files
