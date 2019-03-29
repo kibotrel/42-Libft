@@ -6,7 +6,7 @@
 /*   By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 14:59:01 by kibotrel          #+#    #+#             */
-/*   Updated: 2019/02/26 14:19:15 by kibotrel         ###   ########.fr       */
+/*   Updated: 2019/03/29 17:08:25 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,9 @@ int					ft_strnequ(char const *s1, char const *s2, size_t n);
 **	String manipulation functions
 */
 
+int					ft_char_count(char const *s, char c);
 int					ft_word_count(char const *s, char c);
+int					ft_char_rcount(char const *s, char c);
 int					ft_word_length(char const *s, int i, char c);
 char				*ft_strrev(char *str);
 char				*ft_strupcase(char *str);
