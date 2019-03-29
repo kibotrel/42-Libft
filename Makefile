@@ -6,7 +6,7 @@
 #    By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 14:35:03 by kibotrel          #+#    #+#              #
-#    Updated: 2019/02/26 14:21:59 by kibotrel         ###   ########.fr        #
+#    Updated: 2019/03/29 17:09:31 by kibotrel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,8 @@ SRC			= ft_putchar.c				ft_putchar_fd.c			\
 			  ft_strtrim.c				ft_strchr.c				\
 			  ft_strsplit.c				ft_strjoin.c			\
 			  ft_strncpy.c				ft_strncat.c			\
-			  ft_strnstr.c										\
+			  ft_strnstr.c				ft_char_count.c			\
+			  ft_char_rcount.c									\
 			  													\
 			  ft_toupper.c				ft_tolower.c			\
 			  ft_atoi.c					ft_itoa.c				\
