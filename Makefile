@@ -6,7 +6,7 @@
 #    By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 14:35:03 by kibotrel          #+#    #+#              #
-#    Updated: 2019/03/29 17:09:31 by kibotrel         ###   ########.fr        #
+#    Updated: 2019/04/04 15:21:06 by kibotrel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,8 +33,9 @@ SRC			= ft_putchar.c				ft_putchar_fd.c			\
 			  ft_isprint.c				ft_isspace.c			\
 			  ft_str_is_uppercase.c		ft_str_is_lowercase.c	\
 			  ft_memcmp.c				ft_strnequ.c			\
-			  ft_strncmp.c										\
-			  													\
+			  ft_strcmp.c				ft_strncmp.c			\
+			  ft_strequ.c										\
+																\
 			  ft_word_count.c			ft_word_length.c		\
 			  ft_strrev.c				ft_numlen.c				\
 			  ft_strupcase.c			ft_strlowcase.c			\
@@ -43,17 +44,18 @@ SRC			= ft_putchar.c				ft_putchar_fd.c			\
 			  ft_strsplit.c				ft_strjoin.c			\
 			  ft_strncpy.c				ft_strncat.c			\
 			  ft_strnstr.c				ft_char_count.c			\
-			  ft_char_rcount.c									\
-			  													\
+			  ft_char_rcount.c			ft_strcat.c				\
+			  ft_strcpy.c				ft_strstr.c				\
+																\
 			  ft_toupper.c				ft_tolower.c			\
 			  ft_atoi.c					ft_itoa.c				\
 			  ft_itoa_base.c									\
-			  													\
+																\
 			  ft_memalloc.c				ft_bzero.c				\
 			  ft_memchr.c				ft_memcpy.c				\
 			  ft_memccpy.c				ft_memmove.c			\
 			  ft_memset.c				ft_strnew.c				\
-			  													\
+																\
 			  ft_get_next_line.c
 
 # Some tricks in order to get the makefile doing his job the way I want (Can't be changed)

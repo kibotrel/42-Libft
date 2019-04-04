@@ -6,7 +6,7 @@
 /*   By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 14:59:01 by kibotrel          #+#    #+#             */
-/*   Updated: 2019/03/29 17:08:25 by kibotrel         ###   ########.fr       */
+/*   Updated: 2019/04/04 15:23:30 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,8 @@ int					ft_isprint(int c);
 int					ft_isspace(int c);
 int					ft_str_is_lowercase(char *str);
 int					ft_str_is_uppercase(char *str);
+int					ft_strequ(char const *s1, char const *s2);
+int					ft_strcmp(const char *s1, const char *s2);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);
@@ -79,14 +81,18 @@ char				*ft_strlowcase(char *str);
 char				*ft_strdup(const char *s1);
 char				*ft_strtrim(char const *s);
 char				*ft_strchr(const char *s, int c);
+char				*ft_strcat(char *s1, const char *s2);
 char				**ft_strsplit(char const *s, char c);
+char				*ft_strcpy(char *dst, const char *src);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strncat(char *s1, const char *s2, size_t n);
 char				*ft_strncpy(char *dst, const char *src, size_t len);
+char				*ft_strstr(const char *haystack, const char *needle);
 char				*ft_strnstr(const char *s1, const char *s2, size_t len);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 size_t				ft_strlen(const char *s);
 unsigned int		ft_numlen(long nb, int base);
+
 /*
 **	Conversion functions
 */
