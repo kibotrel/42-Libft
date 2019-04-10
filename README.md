@@ -1,4 +1,4 @@
-# Libft
+# 42-Libft
 The very first school project at 42. This repository contains most of the project **libft** and all the function that I thought useful at some point in the cursus.
 
 ## Install
