@@ -2,7 +2,7 @@
 The very first school project at 42. This repository contains most of the project **libft** and all the function that I thought useful at some point in the cursus.
 
 ## Install
-Simply run :
+This project works on any **macOS X** and **Debian Stretch 9.8** for sure and should everywhere else (not sure). To compile the library, simply run :
 ```
 $> make
 ```
