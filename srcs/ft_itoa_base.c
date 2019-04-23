@@ -6,7 +6,7 @@
 /*   By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 13:52:52 by kibotrel          #+#    #+#             */
-/*   Updated: 2019/02/26 14:18:49 by kibotrel         ###   ########.fr       */
+/*   Updated: 2019/04/23 15:45:29 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 char	*ft_itoa_base(int value, int base)
 {
 	int				size;
+	long			nbr;
 	char			*result;
 	char			*ref_base;
-	long			nbr;
 
 	nbr = value;
 	ref_base = "0123456789ABCDEF";

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 17:22:57 by kibotrel          #+#    #+#             */
-/*   Updated: 2018/11/25 19:25:35 by kibotrel         ###   ########.fr       */
+/*   Updated: 2019/04/23 16:09:03 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 static size_t	precheck(char const *s)
 {
-	size_t			i;
+	size_t	i;
 
 	i = -1;
 	while (s && s[++i])
@@ -26,7 +26,7 @@ static size_t	precheck(char const *s)
 
 static char		*blank(void)
 {
-	char			*empty;
+	char	*empty;
 
 	if (!(empty = (char*)malloc(sizeof(*empty * 1))))
 		return (0);
@@ -36,10 +36,10 @@ static char		*blank(void)
 
 char			*ft_strtrim(char const *s)
 {
-	char			*trim;
-	size_t			end;
-	size_t			start;
-	size_t			i;
+	char	*trim;
+	size_t	i;
+	size_t	end;
+	size_t	start;
 
 	end = 0;
 	start = 0;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/08 17:58:46 by kibotrel          #+#    #+#             */
-/*   Updated: 2018/11/15 19:32:04 by kibotrel         ###   ########.fr       */
+/*   Updated: 2019/04/23 15:52:58 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,9 @@ int	ft_str_is_lowercase(char *str)
 {
 	int i;
 
-	i = 0;
-	while (str[i])
-	{
+	i = -1;
+	while (str[++i])
 		if (!(str[i] >= 'a' && str[i] <= 'z'))
 			return (0);
-		i++;
-	}
 	return (1);
 }

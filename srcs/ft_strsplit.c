@@ -6,7 +6,7 @@
 /*   By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 12:14:34 by kibotrel          #+#    #+#             */
-/*   Updated: 2019/04/16 12:02:45 by kibotrel         ###   ########.fr       */
+/*   Updated: 2019/04/23 16:04:32 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 char		**ft_strsplit(char const *s, char c)
 {
-	char	**tab;
 	int		i;
 	int		j;
+	char	**tab;
 
 	i = 0;
 	if (!s || !(tab = (char**)malloc(sizeof(*tab) * (ft_word_count(s, c) + 1))))

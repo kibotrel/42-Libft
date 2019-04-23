@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_get_next_line.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/18 16:49:40 by kibotrel          #+#    #+#             */
-/*   Updated: 2019/01/15 23:21:11 by kibotrel         ###   ########.fr       */
+/*   Updated: 2019/04/23 15:44:27 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,10 @@ static int	ft_process_line(char **save, char **line, int length, int n)
 
 static int	ft_fd_line(const int fd, char **line, char **save)
 {
-	char			str[BUFF_SIZE + 1];
-	char			*tmp;
 	int				n;
 	int				length;
+	char			*tmp;
+	char			str[BUFF_SIZE + 1];
 
 	while ((length = ft_index(*save, '\n')) == ft_index(*save, '\0'))
 	{
@@ -82,9 +82,9 @@ static void	ft_gnlist_del(t_gnlist **cyclehit)
 
 int			ft_get_next_line(const int fd, char **line)
 {
-	static t_gnlist *cyclehit = NULL;
-	t_gnlist		*current;
 	int				n;
+	t_gnlist		*current;
+	static t_gnlist *cyclehit = NULL;
 
 	n = 0;
 	current = cyclehit;

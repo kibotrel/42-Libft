@@ -6,7 +6,7 @@
 /*   By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 16:56:21 by kibotrel          #+#    #+#             */
-/*   Updated: 2019/02/26 14:16:59 by kibotrel         ###   ########.fr       */
+/*   Updated: 2019/04/23 15:45:54 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 char				*ft_itoa(int n)
 {
-	char		*str;
 	int			length;
 	long		nb;
+	char		*str;
 
 	nb = n;
 	length = ft_numlen(nb, 10);

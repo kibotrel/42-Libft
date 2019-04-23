@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 13:03:09 by kibotrel          #+#    #+#             */
-/*   Updated: 2018/11/25 17:32:32 by kibotrel         ###   ########.fr       */
+/*   Updated: 2019/04/23 15:47:34 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	const char	*s1;
 	char		*s2;
 	size_t		i;
+	const char	*s1;
 
 	s1 = src;
 	s2 = dst;

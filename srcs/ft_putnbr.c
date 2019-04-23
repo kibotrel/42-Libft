@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:20:13 by kibotrel          #+#    #+#             */
-/*   Updated: 2018/11/25 19:40:13 by kibotrel         ###   ########.fr       */
+/*   Updated: 2019/04/23 15:51:48 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ void	ft_putnbr(int nb)
 {
 	if (nb < 0)
 	{
-		ft_putchar('-');
 		if (nb == INT_MIN)
 		{
-			ft_putchar('2');
-			nb = INT_MIN + 2000000000;
+			ft_putstr("-2147483648");
+			return ;
 		}
+		ft_putchar('-');
 		nb = -nb;
 	}
 	if (nb >= 10)

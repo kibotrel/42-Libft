@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 14:27:04 by kibotrel          #+#    #+#             */
-/*   Updated: 2018/11/25 17:49:23 by kibotrel         ###   ########.fr       */
+/*   Updated: 2019/04/23 15:47:50 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned const char	*source;
-	unsigned char		*dest;
 	size_t				i;
+	unsigned char		*dest;
+	unsigned const char	*source;
 
 	source = (unsigned const char*)src;
 	dest = (unsigned char*)dst;

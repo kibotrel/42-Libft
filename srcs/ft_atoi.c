@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kibotrel <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:32:03 by kibotrel          #+#    #+#             */
-/*   Updated: 2018/11/25 16:58:29 by kibotrel         ###   ########.fr       */
+/*   Updated: 2019/04/23 15:38:39 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,8 @@ int			ft_atoi(const char *str)
 	while (ft_isspace(str[i]))
 		i++;
 	if (str[i] == '+' || str[i] == '-')
-	{
-		if (str[i] == '-')
+		if (str[i++] == '-')
 			negative = 1;
-		i++;
-	}
 	while (ft_isdigit((int)str[i]))
 		result = result * 10 + ((int)str[i++] - '0');
 	if (lim(result, negative) == 0 || lim(result, negative) == -1)
