@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_char_rcount.c                                   :+:      :+:    :+:   */
+/*   ft_wordlength.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/29 17:20:13 by kibotrel          #+#    #+#             */
-/*   Updated: 2019/04/16 07:33:06 by kibotrel         ###   ########.fr       */
+/*   Created: 2019/01/16 01:49:34 by kibotrel          #+#    #+#             */
+/*   Updated: 2019/04/23 16:24:41 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_char_rcount(char *str, char c)
+int	ft_wordlength(char const *s, int i, char c)
 {
-	int	counter;
+	int length;
 
-	counter = 0;
-	while (str && *str)
-		if (*str++ != c)
-			counter++;
-	return (counter);
+	length = 0;
+	while (s[i] && s[i] != c)
+	{
+		length++;
+		i++;
+	}
+	return (length);
 }
