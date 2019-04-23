@@ -18,10 +18,11 @@ All functions in this repository is organised in different categories.
 Category | Number of functions 
 :---: | :---:
 Display | 9
-Control | 13
-String manipulation | 21
-Conversion | 5
+Control | 21
+String manipulation | 11
+Conversion | 7
 Memory manipulation | 8
 File manipulation | 1
+Total | 57
 
 Every function is documented in the [**wiki**](https://github.com/kibotrel/42-Libft/wiki), check it out for more informations !
