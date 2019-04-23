@@ -6,7 +6,7 @@
 #    By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 14:35:03 by kibotrel          #+#    #+#              #
-#    Updated: 2019/04/23 18:30:22 by kibotrel         ###   ########.fr        #
+#    Updated: 2019/04/23 19:11:24 by kibotrel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,69 +18,81 @@ NAME		= libft.a
 
 OBJDIR		= objs/
 SRCDIR		= srcs/
-INCDIR		= ./incs/
+INCDIR		= incs/
+OBJSUBDIRS	= control conversion display file memory string
 
 # Source files (Can be changed)
 
-SRC			= ft_putchar.c				ft_putchar_fd.c			\
-		  	  ft_putstr.c				ft_putstr_fd.c			\
-			  ft_putnbr.c				ft_putnbr_fd.c			\
-			  ft_putendl.c				ft_putendl_fd.c			\
-			  ft_print_error.c									\
-																\
-			  ft_isalpha.c				ft_isdigit.c			\
-			  ft_isalnum.c				ft_isascii.c			\
-			  ft_isprint.c				ft_isspace.c			\
-			  ft_charrcount.c			ft_charcount.c			\
-			  ft_str_is_uppercase.c		ft_str_is_lowercase.c	\
-			  ft_strequ.c				ft_strnequ.c			\
-			  ft_strcmp.c				ft_strncmp.c			\
-			  ft_strstr.c				ft_strnstr.c			\
-			  ft_wordcount.c			ft_wordlength.c			\
-			  ft_strlen.c				ft_numlen.c				\
-			  ft_memcmp.c										\
-																\
-			  ft_strdup.c				ft_strrev.c				\
-			  ft_strtrim.c				ft_strchr.c				\
-			  ft_strsplit.c				ft_strjoin.c			\
-			  ft_strcat.c				ft_strncat.c			\
-			  ft_strcpy.c				ft_strncpy.c			\
-			  ft_strsub.c										\
-																\
-			  ft_strupcase.c			ft_strlowcase.c			\
-			  ft_toupper.c				ft_tolower.c			\
-			  ft_itoa.c					ft_itoa_base.c			\
-			  ft_atoi.c											\
-																\
-			  ft_memalloc.c				ft_bzero.c				\
-			  ft_memchr.c				ft_memcpy.c				\
-			  ft_memccpy.c				ft_memmove.c			\
-			  ft_memset.c				ft_strnew.c				\
-																\
-			  ft_get_next_line.c
+SRC			= display/ft_putchar.c				display/ft_putchar_fd.c			\
+		  	  display/ft_putstr.c				display/ft_putstr_fd.c			\
+			  display/ft_putnbr.c				display/ft_putnbr_fd.c			\
+			  display/ft_putendl.c				display/ft_putendl_fd.c			\
+			  display/ft_print_error.c											\
+																				\
+			  control/ft_isalpha.c				control/ft_isdigit.c			\
+			  control/ft_isalnum.c				control/ft_isascii.c			\
+			  control/ft_isprint.c				control/ft_isspace.c			\
+			  control/ft_charrcount.c			control/ft_charcount.c			\
+			  control/ft_str_is_uppercase.c		control/ft_str_is_lowercase.c	\
+			  control/ft_strequ.c				control/ft_strnequ.c			\
+			  control/ft_strcmp.c				control/ft_strncmp.c			\
+			  control/ft_strstr.c				control/ft_strnstr.c			\
+			  control/ft_wordcount.c			control/ft_wordlength.c			\
+			  control/ft_strlen.c				control/ft_numlen.c				\
+			  control/ft_memcmp.c												\
+																				\
+			  string/ft_strdup.c				string/ft_strrev.c				\
+			  string/ft_strtrim.c				string/ft_strchr.c				\
+			  string/ft_strsplit.c				string/ft_strjoin.c				\
+			  string/ft_strcat.c				string/ft_strncat.c				\
+			  string/ft_strcpy.c				string/ft_strncpy.c				\
+			  string/ft_strsub.c												\
+																				\
+			  conversion/ft_strupcase.c			conversion/ft_strlowcase.c		\
+			  conversion/ft_toupper.c			conversion/ft_tolower.c			\
+			  conversion/ft_itoa.c				conversion/ft_itoa_base.c		\
+			  conversion/ft_atoi.c												\
+																				\
+			  memory/ft_memalloc.c				memory/ft_bzero.c				\
+			  memory/ft_memchr.c				memory/ft_memcpy.c				\
+			  memory/ft_memccpy.c				memory/ft_memmove.c				\
+			  memory/ft_memset.c				memory/ft_strnew.c				\
+																				\
+			  file/ft_get_next_line.c
 
 # Some tricks in order to get the makefile doing his job the way I want (Can't be changed)
 
 CSRC		= $(addprefix $(SRCDIR), $(SRC))
 COBJ		= $(addprefix $(OBJDIR), $(OBJ))
-CHECKDIR	= $(shell if [ ! -d "$(OBJDIR)" ]; then	mkdir $(OBJDIR); fi)
+SUBDIRS		= $(foreach dir, $(OBJSUBDIRS), $(OBJDIR)$(dir))
+INCLUDES	= $(foreach include, $(INCDIR), -I./$(include))
 
 # How files should be compiled with set flags (Can be changed)
 
-OBJ			= $(SRC:.c=.o)
-CFLAGS		= -I$(INCDIR) -Wall -Wextra -Werror
 CC			= gcc
+OBJ			= $(SRC:.c=.o)
+CFLAGS		= $(INCLUDES) -Wall -Wextra -Werror
+
+# Rule called upon 'make'
+
+all: $(SUBDIRS) $(NAME)
+
+# Tries to create all subdirectories in objs
+
+$(SUBDIRS):
+	@mkdir -p $(SUBDIRS)
 
 # Build the library when all .c files are compiled into .o files and then indexing it
 
-$(NAME): $(CHECKDIR) $(COBJ)
+$(NAME): $(OBJDIR) $(COBJ)
 	@echo "\033[33m\n      - Building \033[0m$(NAME) \033[33m...\n\033[0m"
-	@ar rc $(NAME) $(COBJ)
-	@echo "\033[33m      - Indexing \033[0m$(NAME) \033[33m...\n\033[0m"
-	@ranlib $(NAME)
+	@ar rcs $(NAME) $(COBJ)
 	@echo "\033[32m***   Project $(NAME) successfully compiled   ***\n\033[0m"
 
-all: $(NAME)
+# Tries to create objs directory
+
+$(OBJDIR):
+	@mkdir -p $(OBJDIR)
 
 # Redefinition of implicit compilation rule to prompt some colors and file names during the said compilation
 
