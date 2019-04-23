@@ -9,7 +9,7 @@ $> make
 
 You'll get a static library called **libft.a** at repository's root. In order to use it afterwards you may have to include it to the compilation when you call any function of the library in another project.
 ```
-$> gcc -I./LIB_FOLDER/includes -L./LIB_FOLDER/ -lft [...]
+$> gcc -I./LIB_FOLDER/incs -L./LIB_FOLDER/ -lft [...]
 ```
 
 ## Breakdown
