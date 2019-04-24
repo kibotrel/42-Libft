@@ -6,7 +6,7 @@
 #    By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 14:35:03 by kibotrel          #+#    #+#              #
-#    Updated: 2019/04/23 19:11:24 by kibotrel         ###   ########.fr        #
+#    Updated: 2019/04/24 15:30:43 by kibotrel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ SRC			= display/ft_putchar.c				display/ft_putchar_fd.c			\
 			  control/ft_strstr.c				control/ft_strnstr.c			\
 			  control/ft_wordcount.c			control/ft_wordlength.c			\
 			  control/ft_strlen.c				control/ft_numlen.c				\
-			  control/ft_memcmp.c												\
+			  control/ft_memcmp.c				control/ft_isvalidname.c		\
 																				\
 			  string/ft_strdup.c				string/ft_strrev.c				\
 			  string/ft_strtrim.c				string/ft_strchr.c				\

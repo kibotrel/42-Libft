@@ -6,7 +6,7 @@
 /*   By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 14:59:01 by kibotrel          #+#    #+#             */
-/*   Updated: 2019/04/23 18:27:45 by kibotrel         ###   ########.fr       */
+/*   Updated: 2019/04/24 15:31:37 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ void				ft_print_error(char *desc, int error);
 /*
 **	Control functions
 */
-
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
 int					ft_isalnum(int c);
@@ -66,6 +65,7 @@ int					ft_charrcount(char const *s, char c);
 int					ft_strequ(char const *s1, char const *s2);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_wordlength(char const *s, int i, char c);
+int					ft_isvalidname(char *filename, char *reference);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);

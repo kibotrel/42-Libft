@@ -15,10 +15,10 @@ $> gcc -I./LIB_FOLDER/includes -L./LIB_FOLDER/ -lft [...]
 ## Breakdown
 All functions in this repository is organised in different categories.
 
-Category | Number of functions 
+Category | Number of functions
 :---: | :---:
 Display | 9
-Control | 13
+Control | 14
 String manipulation | 21
 Conversion | 5
 Memory manipulation | 8
