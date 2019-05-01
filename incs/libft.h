@@ -6,7 +6,7 @@
 /*   By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 14:59:01 by kibotrel          #+#    #+#             */
-/*   Updated: 2019/04/24 15:31:37 by kibotrel         ###   ########.fr       */
+/*   Updated: 2019/05/01 12:06:21 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,6 @@ char				*ft_strstr(const char *haystack, const char *needle);
 char				*ft_strnstr(const char *s1, const char *s2, size_t len);
 size_t				ft_strlen(const char *s);
 unsigned int		ft_numlen(long nb, int base);
-
 
 /*
 **	String manipulation functions

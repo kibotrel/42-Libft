@@ -6,7 +6,7 @@
 /*   By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 12:14:34 by kibotrel          #+#    #+#             */
-/*   Updated: 2019/05/01 12:01:58 by kibotrel         ###   ########.fr       */
+/*   Updated: 2019/05/01 12:06:47 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,8 @@ static void	free_split(char **tab)
 	int	i;
 
 	i = -1;
-
 	while (tab[++i])
-	 	free(tab[i]);
+		free(tab[i]);
 	free(tab);
 }
 
