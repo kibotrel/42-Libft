@@ -6,7 +6,7 @@
 #    By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 14:35:03 by kibotrel          #+#    #+#              #
-#    Updated: 2019/04/24 15:30:43 by kibotrel         ###   ########.fr        #
+#    Updated: 2019/07/08 11:14:21 by kibotrel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,11 +14,18 @@
 
 NAME		= libft.a
 
+# Color codes
+
+RESET		= \033[0m
+GREEN		= \033[32m
+YELLOW		= \033[33m
+
 # All the directories needed to know where files should be (Can be changed)
 
 OBJDIR		= objs/
 SRCDIR		= srcs/
 INCDIR		= incs/
+INCS		= libft.h
 OBJSUBDIRS	= control conversion display file memory string
 
 # Source files (Can be changed)
@@ -64,6 +71,7 @@ SRC			= display/ft_putchar.c				display/ft_putchar_fd.c			\
 
 CSRC		= $(addprefix $(SRCDIR), $(SRC))
 COBJ		= $(addprefix $(OBJDIR), $(OBJ))
+HEADERS		= $(foreach header, $(INCS), $(INCDIR)$(header))
 SUBDIRS		= $(foreach dir, $(OBJSUBDIRS), $(OBJDIR)$(dir))
 INCLUDES	= $(foreach include, $(INCDIR), -I./$(include))
 
@@ -85,9 +93,9 @@ $(SUBDIRS):
 # Build the library when all .c files are compiled into .o files and then indexing it
 
 $(NAME): $(OBJDIR) $(COBJ)
-	@echo "\033[33m\n      - Building \033[0m$(NAME) \033[33m...\n\033[0m"
+	@echo "$(YELLOW)\n      - Building $(RESET)$(NAME) $(YELLOW)...\n$(RESET)"
 	@ar rcs $(NAME) $(COBJ)
-	@echo "\033[32m***   Project $(NAME) successfully compiled   ***\n\033[0m"
+	@echo "$(GREEN)***   Project $(NAME) successfully compiled   ***\n$(RESET)"
 
 # Tries to create objs directory
 
@@ -96,21 +104,21 @@ $(OBJDIR):
 
 # Redefinition of implicit compilation rule to prompt some colors and file names during the said compilation
 
-$(OBJDIR)%.o: $(SRCDIR)%.c
-	@echo "\033[33m      - Compiling :\033[0m" $<
+$(OBJDIR)%.o: $(SRCDIR)%.c $(HEADERS)
+	@echo "$(YELLOW)      - Compiling :$(RESET)" $<
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 # Deleting all .o files and then the directory where they were located
 
 clean:
-	@echo "\n\033[32m***   Deleting all object files   ...   ***\n\033[0m"
-	@rm -rf $(COBJ)
+	@echo "$(GREEN)***   Deleting all object from $(NAME)   ...   ***\n$(RESET)"
+	@$(RM) $(COBJ)
 
 # Deleting the library after cleaning up all .o files
 
 fclean: clean
-	@echo "\033[32m***   Deleting executable file    ...   ***\n\033[0m"
-	@rm -rf $(NAME)
+	@echo "$(GREEN)***   Deleting executable file from $(NAME)   ...   ***\n$(RESET)"
+	@$(RM) $(NAME)
 
 # Delete all .o files then the library and rebuild the whole thing again
 
