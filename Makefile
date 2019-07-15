@@ -6,7 +6,7 @@
 #    By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 14:35:03 by kibotrel          #+#    #+#              #
-#    Updated: 2019/07/08 11:14:21 by kibotrel         ###   ########.fr        #
+#    Updated: 2019/07/15 20:57:58 by kibotrel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,8 @@ OBJDIR		= objs/
 SRCDIR		= srcs/
 INCDIR		= incs/
 INCS		= libft.h
-OBJSUBDIRS	= control conversion display file memory string
+
+OBJSUBDIRS	= control conversion display file memory string maths
 
 # Source files (Can be changed)
 
@@ -65,7 +66,12 @@ SRC			= display/ft_putchar.c				display/ft_putchar_fd.c			\
 			  memory/ft_memccpy.c				memory/ft_memmove.c				\
 			  memory/ft_memset.c				memory/ft_strnew.c				\
 																				\
-			  file/ft_get_next_line.c
+			  file/ft_get_next_line.c											\
+																				\
+			  maths/ft_radians.c				maths/ft_degrees.c				\
+			  maths/ft_int.c					maths/ft_short.c				\
+			  maths/ft_abs.c					maths/ft_fabs.c					\
+			  maths/ft_average.c
 
 # Some tricks in order to get the makefile doing his job the way I want (Can't be changed)
 

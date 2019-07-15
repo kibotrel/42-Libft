@@ -6,7 +6,7 @@
 /*   By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 14:59:01 by kibotrel          #+#    #+#             */
-/*   Updated: 2019/05/01 12:06:21 by kibotrel         ###   ########.fr       */
+/*   Updated: 2019/07/15 20:57:50 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@
 
 typedef struct		s_gnlist
 {
-	struct s_gnlist	*next;
-	struct s_gnlist	*prev;
 	int				fd;
 	char			*save;
+	struct s_gnlist	*next;
+	struct s_gnlist	*prev;
 }					t_gnlist;
 
 /*
@@ -120,5 +120,17 @@ void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
 */
 
 int					ft_get_next_line(const int fd, char **line);
+
+/*
+**	Maths functions
+*/
+
+int					ft_abs(int value);
+int					ft_int(unsigned char *nb);
+int					ft_short(unsigned char *nb);
+double				ft_fabs(double value);
+double				ft_radians(double angle);
+double				ft_degrees(double angle);
+double				ft_average(double *value, int amount);
 
 #endif
