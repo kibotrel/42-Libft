@@ -23,6 +23,7 @@ String manipulation | 11
 Conversion | 7
 Memory manipulation | 8
 File manipulation | 1
-Total | 57
+Maths | 7
+Total | 64
 
 Every function is documented in the [**wiki**](https://github.com/kibotrel/42-Libft/wiki), check it out for more informations !
