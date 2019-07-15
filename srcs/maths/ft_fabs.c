@@ -6,11 +6,11 @@
 /*   By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 20:47:21 by kibotrel          #+#    #+#             */
-/*   Updated: 2019/07/15 20:48:12 by kibotrel         ###   ########.fr       */
+/*   Updated: 2019/07/15 21:09:21 by kibotrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-double	ft_fabs(double value)
+double	ft_fabs(double nb)
 {
-	return (value < 0 ? -value : value);
+	return (nb < 0 ? -nb : nb);
 }
