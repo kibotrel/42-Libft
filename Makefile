@@ -6,128 +6,184 @@
 #    By: kibotrel <kibotrel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 14:35:03 by kibotrel          #+#    #+#              #
-#    Updated: 2019/07/15 20:57:58 by kibotrel         ###   ########.fr        #
+#    Updated: 2019/09/25 14:58:54 by kibotrel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# Executable's name (Can be changed)
+#---------------------------------- VARIABLES ---------------------------------#
 
-NAME		= libft.a
+# Executable / Library (Can be changed).
 
-# Color codes
+NAME			= libft.a
 
-RESET		= \033[0m
-GREEN		= \033[32m
-YELLOW		= \033[33m
+# Color codes (Can be changed).
 
-# All the directories needed to know where files should be (Can be changed)
+RESET			= \033[0m
+GREEN			= \033[32m
+YELLOW			= \033[33m
 
-OBJDIR		= objs/
-SRCDIR		= srcs/
-INCDIR		= incs/
-INCS		= libft.h
+#--------------------------------- DIRECTORIES  -------------------------------#
 
-OBJSUBDIRS	= control conversion display file memory string maths
+# Project (Can be changed).
 
-# Source files (Can be changed)
+SRCS_DIR		= srcs
+OBJS_DIR		= objs
 
-SRC			= display/ft_putchar.c				display/ft_putchar_fd.c			\
-		  	  display/ft_putstr.c				display/ft_putstr_fd.c			\
-			  display/ft_putnbr.c				display/ft_putnbr_fd.c			\
-			  display/ft_putendl.c				display/ft_putendl_fd.c			\
-			  display/ft_print_error.c											\
-																				\
-			  control/ft_isalpha.c				control/ft_isdigit.c			\
-			  control/ft_isalnum.c				control/ft_isascii.c			\
-			  control/ft_isprint.c				control/ft_isspace.c			\
-			  control/ft_charrcount.c			control/ft_charcount.c			\
-			  control/ft_str_is_uppercase.c		control/ft_str_is_lowercase.c	\
-			  control/ft_strequ.c				control/ft_strnequ.c			\
-			  control/ft_strcmp.c				control/ft_strncmp.c			\
-			  control/ft_strstr.c				control/ft_strnstr.c			\
-			  control/ft_wordcount.c			control/ft_wordlength.c			\
-			  control/ft_strlen.c				control/ft_numlen.c				\
-			  control/ft_memcmp.c				control/ft_isvalidname.c		\
-																				\
-			  string/ft_strdup.c				string/ft_strrev.c				\
-			  string/ft_strtrim.c				string/ft_strchr.c				\
-			  string/ft_strsplit.c				string/ft_strjoin.c				\
-			  string/ft_strcat.c				string/ft_strncat.c				\
-			  string/ft_strcpy.c				string/ft_strncpy.c				\
-			  string/ft_strsub.c												\
-																				\
-			  conversion/ft_strupcase.c			conversion/ft_strlowcase.c		\
-			  conversion/ft_toupper.c			conversion/ft_tolower.c			\
-			  conversion/ft_itoa.c				conversion/ft_itoa_base.c		\
-			  conversion/ft_atoi.c												\
-																				\
-			  memory/ft_memalloc.c				memory/ft_bzero.c				\
-			  memory/ft_memchr.c				memory/ft_memcpy.c				\
-			  memory/ft_memccpy.c				memory/ft_memmove.c				\
-			  memory/ft_memset.c				memory/ft_strnew.c				\
-																				\
-			  file/ft_get_next_line.c											\
-																				\
-			  maths/ft_radians.c				maths/ft_degrees.c				\
-			  maths/ft_int.c					maths/ft_short.c				\
-			  maths/ft_abs.c					maths/ft_fabs.c					\
-			  maths/ft_average.c
+# Location of all header files used in the project to avoid
+# writing the full path upon include (Can be changed).
 
-# Some tricks in order to get the makefile doing his job the way I want (Can't be changed)
+INCS_DIR		:= incs
 
-CSRC		= $(addprefix $(SRCDIR), $(SRC))
-COBJ		= $(addprefix $(OBJDIR), $(OBJ))
-HEADERS		= $(foreach header, $(INCS), $(INCDIR)$(header))
-SUBDIRS		= $(foreach dir, $(OBJSUBDIRS), $(OBJDIR)$(dir))
-INCLUDES	= $(foreach include, $(INCDIR), -I./$(include))
+# All the subdirectories used in the project
+# to organise source files (Can be changed).
 
-# How files should be compiled with set flags (Can be changed)
+OBJS_SUBDIRS	:= file
+OBJS_SUBDIRS	+= maths
+OBJS_SUBDIRS	+= memory
+OBJS_SUBDIRS	+= string
+OBJS_SUBDIRS	+= control
+OBJS_SUBDIRS	+= display
+OBJS_SUBDIRS	+= conversion
 
-CC			= gcc
-OBJ			= $(SRC:.c=.o)
-CFLAGS		= $(INCLUDES) -Wall -Wextra -Werror
+#------------------------------------ FILES -----------------------------------#
 
-# Rule called upon 'make'
+# Used header at each compilation to check file integrity (Can be changed).
 
-all: $(SUBDIRS) $(NAME)
+INCS			:= incs/libft.h
 
-# Tries to create all subdirectories in objs
+# Source files (Can be changed).
 
-$(SUBDIRS):
-	@mkdir -p $(SUBDIRS)
+SRCS			:= file/ft_get_next_line.c
+SRCS			+= maths/ft_abs.c
+SRCS			+= maths/ft_int.c
+SRCS			+= maths/ft_fabs.c
+SRCS			+= maths/ft_short.c
+SRCS			+= maths/ft_degrees.c
+SRCS			+= maths/ft_radians.c
+SRCS			+= maths/ft_average.c
+SRCS			+= memory/ft_bzero.c
+SRCS			+= memory/ft_memchr.c
+SRCS			+= memory/ft_memcpy.c
+SRCS			+= memory/ft_memset.c
+SRCS			+= memory/ft_strnew.c
+SRCS			+= memory/ft_memccpy.c
+SRCS			+= memory/ft_memmove.c
+SRCS			+= memory/ft_memalloc.c
+SRCS			+= string/ft_strcat.c
+SRCS			+= string/ft_strchr.c
+SRCS			+= string/ft_strcpy.c
+SRCS			+= string/ft_strdup.c
+SRCS			+= string/ft_strrev.c
+SRCS			+= string/ft_strsub.c
+SRCS			+= string/ft_strjoin.c
+SRCS			+= string/ft_strncat.c
+SRCS			+= string/ft_strncpy.c
+SRCS			+= string/ft_strtrim.c
+SRCS			+= string/ft_strsplit.c
+SRCS			+= control/ft_memcmp.c
+SRCS			+= control/ft_numlen.c
+SRCS			+= control/ft_strcmp.c
+SRCS			+= control/ft_strequ.c
+SRCS			+= control/ft_strlen.c
+SRCS			+= control/ft_strstr.c
+SRCS			+= control/ft_isalnum.c
+SRCS			+= control/ft_isalpha.c
+SRCS			+= control/ft_isascii.c
+SRCS			+= control/ft_isdigit.c
+SRCS			+= control/ft_isprint.c
+SRCS			+= control/ft_isspace.c
+SRCS			+= control/ft_strncmp.c
+SRCS			+= control/ft_strnequ.c
+SRCS			+= control/ft_strnstr.c
+SRCS			+= control/ft_charcount.c
+SRCS			+= control/ft_wordcount.c
+SRCS			+= control/ft_charrcount.c
+SRCS			+= control/ft_wordlength.c
+SRCS			+= control/ft_isvalidname.c
+SRCS			+= control/ft_str_is_lowercase.c
+SRCS			+= control/ft_str_is_uppercase.c
+SRCS			+= display/ft_putnbr.c
+SRCS			+= display/ft_putstr.c
+SRCS			+= display/ft_putchar.c
+SRCS			+= display/ft_putendl.c
+SRCS			+= display/ft_putnbr_fd.c
+SRCS			+= display/ft_putstr_fd.c
+SRCS			+= display/ft_putchar_fd.c
+SRCS			+= display/ft_putendl_fd.c
+SRCS			+= display/ft_print_error.c
+SRCS			+= conversion/ft_atoi.c
+SRCS			+= conversion/ft_itoa.c
+SRCS			+= conversion/ft_tolower.c
+SRCS			+= conversion/ft_toupper.c
+SRCS			+= conversion/ft_itoa_base.c
+SRCS			+= conversion/ft_strupcase.c
+SRCS			+= conversion/ft_strlowcase.c
 
-# Build the library when all .c files are compiled into .o files and then indexing it
+#-------------------------------- MISCELANEOUS --------------------------------#
 
-$(NAME): $(OBJDIR) $(COBJ)
-	@echo "$(YELLOW)\n      - Building $(RESET)$(NAME) $(YELLOW)...\n$(RESET)"
-	@ar rcs $(NAME) $(COBJ)
-	@echo "$(GREEN)***   Project $(NAME) successfully compiled   ***\n$(RESET)"
+# Some tricks in order to get the makefile doing his job (Can't be changed).
 
-# Tries to create objs directory
+D_SRCS			= $(addsuffix /, $(SRCS_DIR))
+D_OBJS			= $(addsuffix /, $(OBJS_DIR))
+C_OBJS			= $(addprefix $(D_OBJS), $(OBJS))
+C_INCS			= $(foreach include, $(INCS_DIR), -I$(include))
+C_SUBDIRS		= $(foreach dir, $(OBJS_SUBDIRS), $(D_OBJS)$(dir))
 
-$(OBJDIR):
-	@mkdir -p $(OBJDIR)
+#--------------------------------- COMPILATION --------------------------------#
 
-# Redefinition of implicit compilation rule to prompt some colors and file names during the said compilation
+# How files should be compiled (Can't be changed).
 
-$(OBJDIR)%.o: $(SRCDIR)%.c $(HEADERS)
+CC				= gcc
+OBJS			= $(SRCS:.c=.o)
+
+# Compilation flags (Can be changed).
+
+CFLAGS			= $(C_INCS) -Wall -Wextra -Werror
+
+#------------------------------------ RULES -----------------------------------#
+
+# Redefinition of the implicit compilation rule
+# to prompt some informations (Can't be changed).
+
+$(D_OBJS)%.o: $(D_SRCS)%.c $(INCS)
 	@echo "$(YELLOW)      - Compiling :$(RESET)" $<
 	@$(CC) $(CFLAGS) -c $< -o $@
 
-# Deleting all .o files and then the directory where they were located
+# Implicit make rule simply using dependancies
+# to compile our project (Can't be canged).
+
+all: $(C_SUBDIRS) $(NAME)
+
+$(NAME): $(OBJS_DIR) $(C_OBJS)
+	@echo "$(YELLOW)\n      - Building $(RESET)$(NAME) $(YELLOW)...\n$(RESET)"
+	@ar rcs $(NAME) $(C_OBJS)
+	@echo "$(GREEN)***   Project $(NAME) successfully compiled   ***\n$(RESET)"
+
+# Rules used to create folders if they aren't already existing (Can be changed).
+
+$(OBJS_DIR):
+	@mkdir -p $(OBJS_DIR)
+
+$(C_SUBDIRS):
+	@mkdir -p $(C_SUBDIRS)
+
+# Deleting all .o files. (Can't be changed).
 
 clean:
 	@echo "$(GREEN)***   Deleting all object from $(NAME)   ...   ***\n$(RESET)"
-	@$(RM) $(COBJ)
+	@$(RM) $(C_OBJS)
 
-# Deleting the library after cleaning up all .o files
+# Deleting the library after cleaning up all .o files (Can't be changed).
 
 fclean: clean
-	@echo "$(GREEN)***   Deleting executable file from $(NAME)   ...   ***\n$(RESET)"
+	@echo "$(GREEN)***   Deleting library $(NAME)   ...   ***\n$(RESET)"
 	@$(RM) $(NAME)
 
-# Delete all .o files then the library and rebuild the whole thing again
+# Re-compile everything (Can't be changed).
 
 re: fclean all
+
+# Avoid unexpected behaviour when regular files
+# get the same name as the following variables (Can be changed).
 
 .PHONY: all clean fclean re
