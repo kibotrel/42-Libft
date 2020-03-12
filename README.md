@@ -2,12 +2,14 @@
 The very first school project at 42. This repository contains most of the project **libft** and all the function that I thought useful at some point in the cursus.
 
 ## Install
-This project works on any **macOS X** and **Debian Stretch 9.8** for sure and should everywhere else (not sure). To compile the library, simply run :
+This project works on any **macOS Sierra 10.12.6**, **macOS Mojave 10.14.6**, **Debian Stretch 9.8** and **Ubuntu Bionic Beaver 18.04.4** for sure and should everywhere else (not sure). To compile the library, simply run :
+
 ```shell
 $> make
 ```
 
 You'll get a static library called **libft.a** at repository's root. In order to use it afterwards you may have to include it to the compilation when you call any function of the library in another project.
+
 ```shell
 $> gcc -I./LIB_FOLDER/incs -L./LIB_FOLDER/ -lft [...]
 ```
